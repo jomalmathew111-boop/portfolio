@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jomal Mathew — Catalog Specialist & E-commerce Merchandiser</title>
+<meta name="description" content="Portfolio of Jomal Mathew — Catalog Specialist with 5.5+ years of experience in vendor management, pricing strategy, and digital merchandising across WebLife Stores, Ashley Furniture, and Amazon." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,500&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --blue: #001BC0;
+    --blue-soft: #001BC014;
+    --ink: #0E0E12;
+    --ink-2: #44444E;
+    --ink-3: #7A7A85;
+    --paper: #F7F4ED;
+    --rule: #DAD5C9;
+    --accent: #FF5A1F;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection { background: var(--blue); color: var(--paper); }
+
+  /* film-grain noise overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 100;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+
+  /* ---------- top bar ---------- */
+  .topbar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 22px 48px;
+    backdrop-filter: blur(14px);
+    background: rgba(247, 244, 237, 0.78);
+    border-bottom: 1px solid var(--rule);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .topbar .logo { font-weight: 500; }
+  .topbar .logo span { color: var(--blue); }
+  .topbar nav { display: flex; gap: 28px; align-items: center; }
+  .topbar nav a { color: var(--ink-2); text-decoration: none; transition: color .2s; }
+  .topbar nav a:hover { color: var(--blue); }
+  .topbar nav a.nav-cv {
+    background: var(--blue); color: var(--paper);
+    padding: 8px 16px; border-radius: 999px;
+    transition: background .2s, transform .2s;
+  }
+  .topbar nav a.nav-cv:hover { color: var(--paper); transform: translateY(-1px); }
+  @media (max-width: 720px) {
+    .topbar { padding: 16px 24px; }
+    .topbar nav { display: none; }
+  }
+
+  /* ---------- shared section frame ---------- */
+  section { padding: 0 48px; max-width: 1280px; margin: 0 auto; }
+  @media (max-width: 720px) { section { padding: 0 24px; } }
+
+  .label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 18px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .label::before {
+    content: ''; width: 28px; height: 1px; background: var(--blue);
+  }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    min-height: 100vh;
+    padding-top: 140px; padding-bottom: 100px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; padding-top: 110px; gap: 40px; }
+  }
+
+  .hero h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(56px, 9vw, 132px);
+    line-height: 0.95;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+    margin-bottom: 28px;
+  }
+  .hero h1 em {
+    font-style: italic;
+    font-weight: 500;
+    color: var(--blue);
+    font-variation-settings: "opsz" 144;
+  }
+
+  .hero .role-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    margin-bottom: 32px;
+    display: flex; gap: 14px; align-items: center; flex-wrap: wrap;
+  }
+  .hero .role-tag span { padding: 4px 10px; border: 1px solid var(--ink); border-radius: 999px; }
+  .hero .role-tag span.filled { background: var(--ink); color: var(--paper); }
+
+  .hero .lead {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(20px, 2.2vw, 26px);
+    line-height: 1.45;
+    color: var(--ink-2);
+    max-width: 580px;
+    margin-bottom: 40px;
+  }
+  .hero .lead strong { color: var(--ink); font-weight: 500; }
+
+  .hero .cta {
+    display: inline-flex; align-items: center; gap: 14px;
+    padding: 16px 28px;
+    background: var(--blue); color: var(--paper);
+    text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 999px;
+    transition: transform .25s, box-shadow .25s;
+  }
+  .hero .cta:hover { transform: translateY(-2px); box-shadow: 0 8px 32px var(--blue-soft); }
+  .hero .cta::after { content: '↓'; font-family: serif; font-size: 18px; }
+
+  .hero .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+  .hero .cta-secondary {
+    display: inline-flex; align-items: center; gap: 14px;
+    padding: 16px 28px;
+    background: transparent; color: var(--ink);
+    text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 999px;
+    border: 1px solid var(--ink);
+    transition: background .25s, color .25s;
+  }
+  .hero .cta-secondary:hover { background: var(--ink); color: var(--paper); }
+  .hero .cta-secondary::after { content: '→'; font-family: serif; font-size: 18px; }
+
+  /* ---------- HIRING DETAILS STRIP (between hero and marquee) ---------- */
+  .hiring-strip {
+    max-width: 1280px;
+    margin: 60px auto 0;
+    padding: 0 48px;
+  }
+  @media (max-width: 720px) { .hiring-strip { padding: 0 24px; } }
+  .hiring-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  @media (max-width: 900px) { .hiring-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 540px) { .hiring-grid { grid-template-columns: 1fr; } }
+  .hiring-cell {
+    background: var(--paper);
+    padding: 24px 22px;
+  }
+  .hiring-cell .lab {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 10px;
+  }
+  .hiring-cell .val {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.35;
+    color: var(--ink);
+  }
+  .hiring-cell .val em { font-style: italic; color: var(--ink-2); font-size: 14px; }
+
+  /* portrait frame */
+  .portrait {
+    position: relative;
+    aspect-ratio: 4/5;
+    max-width: 380px;
+    margin-left: auto;
+    border: 1px solid var(--rule);
+    background: var(--paper);
+    padding: 14px;
+  }
+  .portrait::before {
+    content: 'JM / 2026';
+    position: absolute;
+    top: -10px; left: 14px;
+    background: var(--paper);
+    padding: 0 8px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: var(--ink-3);
+  }
+  .portrait img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: grayscale(0.15) contrast(1.02);
+  }
+  .portrait .badge {
+    position: absolute; bottom: -16px; right: -16px;
+    width: 84px; height: 84px;
+    background: var(--blue); color: var(--paper);
+    border-radius: 50%;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    font-family: 'Fraunces', serif;
+    line-height: 1;
+    transform: rotate(-8deg);
+    box-shadow: 0 12px 28px rgba(0,27,192,0.28);
+  }
+  .portrait .badge .num { font-size: 28px; font-weight: 500; }
+  .portrait .badge .lbl { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 4px; font-family: 'IBM Plex Mono', monospace; }
+
+  /* marquee strip below hero */
+  .marquee {
+    margin-top: 80px;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 22px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .marquee-track {
+    display: inline-block;
+    animation: scroll 40s linear infinite;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: clamp(22px, 3vw, 36px);
+    font-weight: 300;
+  }
+  .marquee-track span { margin: 0 40px; opacity: 0.6; }
+  .marquee-track em { color: var(--paper); font-style: normal; }
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  /* ---------- ABOUT ---------- */
+  .about {
+    padding-top: 140px;
+    padding-bottom: 100px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 80px;
+  }
+  @media (max-width: 900px) { .about { grid-template-columns: 1fr; gap: 30px; } }
+  .about h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .about h2 em { font-style: italic; color: var(--blue); }
+  .about-body p {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(18px, 1.6vw, 22px);
+    line-height: 1.55;
+    color: var(--ink-2);
+    margin-bottom: 22px;
+    max-width: 680px;
+  }
+  .about-body p strong { color: var(--ink); font-weight: 500; }
+
+  .stats {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  @media (max-width: 720px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+  .stat {
+    background: var(--paper);
+    padding: 28px 22px;
+  }
+  .stat .v {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1;
+    color: var(--blue);
+  }
+  .stat .v sup { font-size: 0.5em; vertical-align: top; margin-left: 2px; }
+  .stat .l {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-top: 12px;
+  }
+
+  /* ---------- EXPERIENCE ---------- */
+  .experience { padding-top: 100px; padding-bottom: 100px; }
+  .exp-head {
+    display: flex; justify-content: space-between; align-items: end;
+    margin-bottom: 60px;
+    flex-wrap: wrap; gap: 20px;
+  }
+  .exp-head h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .exp-head h2 em { font-style: italic; color: var(--blue); }
+  .exp-head p {
+    color: var(--ink-3);
+    font-size: 14px;
+    max-width: 280px;
+  }
+
+  .role-card {
+    border-top: 1px solid var(--rule);
+    padding: 40px 0;
+    display: grid;
+    grid-template-columns: 1.6fr 3fr;
+    gap: 40px;
+    transition: padding-left .3s;
+  }
+  .role-card:hover { padding-left: 16px; }
+  .role-card:last-child { border-bottom: 1px solid var(--rule); }
+  @media (max-width: 720px) { .role-card { grid-template-columns: 1fr; gap: 18px; } }
+
+  .role-meta .company {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 26px;
+    color: var(--ink);
+    line-height: 1.15;
+  }
+  .role-meta .role-name {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-top: 8px;
+  }
+  .role-meta .dates {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--ink-3);
+    margin-top: 4px;
+  }
+  .role-body p {
+    color: var(--ink-2);
+    font-size: 16px;
+    line-height: 1.65;
+    margin-bottom: 14px;
+  }
+  .role-body strong { color: var(--ink); font-weight: 600; }
+  .role-tags { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 6px; }
+  .role-tags span {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    color: var(--ink-3);
+  }
+
+  /* ---------- PROJECTS ---------- */
+  .projects {
+    padding-top: 100px; padding-bottom: 100px;
+    background: var(--ink);
+    max-width: none; margin: 0; padding-left: 0; padding-right: 0;
+  }
+  .projects-inner {
+    max-width: 1280px; margin: 0 auto;
+    padding: 0 48px;
+    color: var(--paper);
+  }
+  @media (max-width: 720px) { .projects-inner { padding: 0 24px; } }
+  .projects h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--paper);
+    margin-bottom: 60px;
+  }
+  .projects h2 em { font-style: italic; color: #6E7BFF; }
+  .projects .label { color: #6E7BFF; }
+  .projects .label::before { background: #6E7BFF; }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  @media (max-width: 720px) { .project-grid { grid-template-columns: 1fr; } }
+
+  .project {
+    background: var(--ink);
+    padding: 48px 36px;
+    transition: background .3s;
+    cursor: default;
+  }
+  .project:hover { background: #16161D; }
+  .project .num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: rgba(255,255,255,0.45);
+  }
+  .project .metric {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(48px, 6vw, 80px);
+    line-height: 1;
+    margin: 28px 0 8px;
+    color: var(--paper);
+    letter-spacing: -0.025em;
+  }
+  .project .metric em { font-style: italic; color: #6E7BFF; }
+  .project .metric-sub {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 28px;
+  }
+  .project h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: var(--paper);
+  }
+  .project p {
+    color: rgba(255,255,255,0.7);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* ---------- SKILLS ---------- */
+  .skills { padding-top: 100px; padding-bottom: 100px; }
+  .skills h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1;
+    margin-bottom: 60px;
+    letter-spacing: -0.02em;
+  }
+  .skills h2 em { font-style: italic; color: var(--blue); }
+
+  .skill-row {
+    border-top: 1px solid var(--rule);
+    padding: 32px 0;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 40px;
+    align-items: start;
+  }
+  .skill-row:last-child { border-bottom: 1px solid var(--rule); }
+  @media (max-width: 720px) { .skill-row { grid-template-columns: 1fr; gap: 12px; } }
+
+  .skill-row .cat {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--blue);
+  }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .skill-tags span {
+    font-size: 14px;
+    padding: 6px 14px;
+    border: 1px solid var(--ink);
+    border-radius: 999px;
+    color: var(--ink);
+    transition: background .2s, color .2s;
+  }
+  .skill-tags span:hover { background: var(--ink); color: var(--paper); }
+  .skill-tags span.feature {
+    background: var(--blue); color: var(--paper); border-color: var(--blue);
+  }
+
+  /* ---------- CONTACT / FOOTER ---------- */
+  .contact {
+    padding-top: 120px; padding-bottom: 80px;
+    text-align: center;
+  }
+  .contact .small {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+  .contact h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(56px, 8vw, 120px);
+    line-height: 0.95;
+    letter-spacing: -0.025em;
+    margin: 24px 0 50px;
+  }
+  .contact h2 em { font-style: italic; color: var(--blue); }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  @media (max-width: 900px) { .contact-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 540px) { .contact-grid { grid-template-columns: 1fr; } }
+  .contact-grid a {
+    background: var(--paper);
+    padding: 32px 20px;
+    text-decoration: none;
+    color: var(--ink);
+    transition: background .25s;
+    display: block;
+  }
+  .contact-grid a:hover { background: var(--blue); color: var(--paper); }
+  .contact-grid a:hover .ctype { color: rgba(255,255,255,0.7); }
+  .contact-grid .ctype {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 12px;
+  }
+  .contact-grid .cval {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 18px;
+    word-break: break-word;
+  }
+
+  footer {
+    border-top: 1px solid var(--rule);
+    margin-top: 100px;
+    padding: 30px 48px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    flex-wrap: wrap; gap: 12px;
+  }
+  @media (max-width: 720px) { footer { padding: 24px; flex-direction: column; text-align: center; } }
+
+  /* page-load reveal */
+  .reveal { opacity: 0; transform: translateY(20px); animation: rise .9s cubic-bezier(.2,.7,.2,1) forwards; }
+  .r1 { animation-delay: .1s; }
+  .r2 { animation-delay: .25s; }
+  .r3 { animation-delay: .4s; }
+  .r4 { animation-delay: .55s; }
+  @keyframes rise {
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="logo">JM <span>/</span> Portfolio</div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+    <a href="Jomal_Mathew_CV.pdf" class="nav-cv" download>Download CV ↓</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div>
+    <div class="label reveal r1">Available for relocation — Dubai, UAE</div>
+    <h1 class="reveal r2">Jomal<br/><em>Mathew.</em></h1>
+    <div class="role-tag reveal r3">
+      <span class="filled">Catalog Specialist</span>
+      <span>Vendor Management</span>
+      <span>Digital Merchandising</span>
+    </div>
+    <p class="lead reveal r3">
+      I maintain the <strong>single source of truth</strong> for product data across multi-website e-commerce ecosystems — turning catalog architecture, pricing strategy, and quantitative analysis into <strong>commercial outcomes</strong>.
+    </p>
+    <div class="cta-row reveal r4">
+      <a class="cta" href="Jomal_Mathew_CV.pdf" download>Download CV</a>
+      <a class="cta-secondary" href="mailto:jomalmathew111@gmail.com">Email me</a>
+    </div>
+  </div>
+  <div class="portrait reveal r4">
+    <img src="https://res.cloudinary.com/drgmm8ig7/image/upload/v1777730294/IMG_20250922_085623_1_wqbbir.jpg" alt="Jomal Mathew portrait" />
+    <div class="badge">
+      <span class="num">5.5+</span>
+      <span class="lbl">Yrs Exp</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HIRING DETAILS STRIP ============ -->
+<div class="hiring-strip">
+  <div class="hiring-grid">
+    <div class="hiring-cell">
+      <div class="lab">Notice Period</div>
+      <div class="val">2 months <em>(negotiable)</em></div>
+    </div>
+    <div class="hiring-cell">
+      <div class="lab">UAE Visa Status</div>
+      <div class="val">Spouse Visa holder<br/><em>Open to Employment Visa transfer</em></div>
+    </div>
+    <div class="hiring-cell">
+      <div class="lab">Languages</div>
+      <div class="val">English · Hindi<br/>Malayalam · Tamil</div>
+    </div>
+    <div class="hiring-cell">
+      <div class="lab">Current Location</div>
+      <div class="val">Kannur, Kerala<br/><em>Relocating to Dubai</em></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span><em>Catalog Architecture</em></span> ✦
+    <span><em>Vendor Intelligence</em></span> ✦
+    <span><em>Pricing Strategy</em></span> ✦
+    <span><em>Margin Optimisation</em></span> ✦
+    <span><em>Digital Merchandising</em></span> ✦
+    <span><em>Issue Resolution</em></span> ✦
+    <span><em>Catalog Architecture</em></span> ✦
+    <span><em>Vendor Intelligence</em></span> ✦
+    <span><em>Pricing Strategy</em></span> ✦
+    <span><em>Margin Optimisation</em></span> ✦
+    <span><em>Digital Merchandising</em></span> ✦
+    <span><em>Issue Resolution</em></span> ✦
+  </div>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="about">
+  <h2>About <em>the work.</em></h2>
+  <div class="about-body">
+    <p>
+      I'm a <strong>Catalog Specialist</strong> currently at WebLife Stores (El Dorado Hills, CA — working remotely from India), where I co-own the catalog data domain across <strong>8 e-commerce websites</strong>. My focus is the architectural layer beneath every product — the data, taxonomy, pricing logic, and vendor intelligence that downstream teams depend on.
+    </p>
+    <p>
+      Before WebLife, I spent four years at <strong>Amazon</strong> driving relevance and quality programs for the U.S. and EN marketplaces, then took a focused stint at <strong>Ashley Furniture</strong> running vendor onboarding, MDF reconciliations, and competitive pricing.
+    </p>
+    <p>
+      What I bring to a Dubai e-commerce team: deep <strong>catalog operations craft</strong>, fluency in <strong>Magento 2, Shopify, and WooCommerce</strong>, advanced quantitative analysis, and an AI-augmented workflow that compresses cycles from days to hours.
+    </p>
+
+    <div class="stats">
+      <div class="stat"><div class="v">8</div><div class="l">Websites Managed</div></div>
+      <div class="stat"><div class="v">99<sup>%</sup></div><div class="l">Catalog Precision</div></div>
+      <div class="stat"><div class="v">+369<span style="font-size:0.55em;">MM</span></div><div class="l">OPS Driven</div></div>
+      <div class="stat"><div class="v">5.5<sup>+</sup></div><div class="l">Years E-com</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience" class="experience">
+  <div class="exp-head">
+    <div>
+      <div class="label">Career path</div>
+      <h2>The <em>track record.</em></h2>
+    </div>
+    <p>From listing audits to architectural co-ownership — six years across three e-commerce environments.</p>
+  </div>
+
+  <div class="role-card">
+    <div class="role-meta">
+      <div class="company">WebLife Stores</div>
+      <div class="role-name">Catalog Specialist</div>
+      <div class="dates">Feb 2026 — Present · Remote (El Dorado Hills, CA)</div>
+    </div>
+    <div class="role-body">
+      <p>Co-own the <strong>Catalog Data domain</strong> and lead <strong>Catalog Issue Resolution (IR)</strong> across an 8-site e-commerce ecosystem. Execute pricing operations and digital merchandising; design analytical dashboards including a <strong>Central Tool Bank</strong> and Company Employee Tree that surface decisions to the whole team.</p>
+      <p>Partner closely with Order Processing, Commercial Account Managers, Marketing, and Warehouse — every team that depends on accurate dimension, weight, pricing, and specification data.</p>
+      <div class="role-tags">
+        <span>Magento 2</span><span>Shopify</span><span>WooCommerce</span><span>Pricing Ops</span><span>Dashboards</span><span>Vendor Intelligence</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-meta">
+      <div class="company">Ashley Furniture<br/>Industries</div>
+      <div class="role-name">E-Comm Merch & Vendor Mgmt Asst.</div>
+      <div class="dates">Dec 2024 — Feb 2026 · Bangalore</div>
+    </div>
+    <div class="role-body">
+      <p>Facilitated vendor onboarding and product setup; managed credit memos and reconciliations for <strong>Black Friday</strong> and <strong>MDF</strong> campaigns. Conducted competitive pricing and market analysis across the regional catalog.</p>
+      <p>Partnered with Quality and Content teams to drive a <strong>50% increase in product activations</strong> month-over-month, and delivered training programs with 100% team completion.</p>
+      <div class="role-tags">
+        <span>Vendor Onboarding</span><span>MDF</span><span>Competitive Pricing</span><span>Training</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-meta">
+      <div class="company">Amazon</div>
+      <div class="role-name">Catalogue Quality Analyst → Specialist → Associate</div>
+      <div class="dates">Oct 2020 — Dec 2024 · Bangalore</div>
+    </div>
+    <div class="role-body">
+      <p>Implemented <strong>TQM</strong> initiatives that lifted catalog precision from 97% to 99%. Supported relevance programs across <strong>20 U.S. marketplace segments</strong>, contributing <strong>+369MM OPS</strong> and <strong>+22MM SP revenue</strong>.</p>
+      <p>Mentored 1P and 3P vendors to a <strong>42% productivity gain</strong>; ran daily stand-ups, RCAs, and WBR sessions for cross-team alignment.</p>
+      <div class="role-tags">
+        <span>TQM</span><span>Sponsored Products</span><span>1P / 3P</span><span>RCA / WBR</span><span>Mentoring</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURED PROJECTS ============ -->
+<section class="projects">
+  <div class="projects-inner">
+    <div class="label">Selected work</div>
+    <h2>Projects with<br/><em>measurable impact.</em></h2>
+
+    <div class="project-grid">
+      <div class="project">
+        <div class="num">01 · Amazon · US</div>
+        <div class="metric">200<em>+</em></div>
+        <div class="metric-sub">Products mapped daily</div>
+        <h3>Engage 3 Mapping</h3>
+        <p>Mapped 200+ Ashley products per day against competitor SKUs in the U.S. marketplace and balanced pricing to keep the catalog competitive at scale.</p>
+      </div>
+
+      <div class="project">
+        <div class="num">02 · Amazon · EN</div>
+        <div class="metric"><em>20</em>%</div>
+        <div class="metric-sub">Customer satisfaction lift</div>
+        <h3>Board Match Improvement</h3>
+        <p>Conceptualized and shipped an advanced query–keyword matching system for catalog relevance, improving customer satisfaction scores by 20% across the EN marketplace.</p>
+      </div>
+
+      <div class="project">
+        <div class="num">03 · Amazon · Trust</div>
+        <div class="metric"><em>50</em>%</div>
+        <div class="metric-sub">Reduction in inappropriate listings</div>
+        <h3>Sensitive & Egregious Audit</h3>
+        <p>Co-developed an advanced content labelling system with sensitive and egregious tags, cutting inappropriate-content surfacing in catalogs by 50% and lifting viewer experience.</p>
+      </div>
+
+      <div class="project">
+        <div class="num">04 · Amazon · EN</div>
+        <div class="metric">SP <em>×</em> Org</div>
+        <div class="metric-sub">Unified irrelevance definition</div>
+        <h3>Whole Page Experience</h3>
+        <p>Created a unified definition of irrelevance across Sponsored Products and Organic Search; aligned category-level rules and rolled out off-cycle policy updates to all 1P & 3P reviewers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills" class="skills">
+  <div class="label">Toolkit</div>
+  <h2>Skills, <em>stacked.</em></h2>
+
+  <div class="skill-row">
+    <div class="cat">Catalog & Merchandising</div>
+    <div class="skill-tags">
+      <span class="feature">Multi-site catalog management</span>
+      <span class="feature">Vendor onboarding & intelligence</span>
+      <span>Catalog Issue Resolution (IR)</span>
+      <span>Digital merchandising</span>
+      <span>Conversion optimisation</span>
+      <span>Catalog governance</span>
+      <span>Feed operations</span>
+      <span>SOP development</span>
+    </div>
+  </div>
+
+  <div class="skill-row">
+    <div class="cat">E-commerce Platforms</div>
+    <div class="skill-tags">
+      <span class="feature">Magento 2</span>
+      <span class="feature">Shopify</span>
+      <span class="feature">WooCommerce</span>
+      <span>WordPress</span>
+      <span>Amazon Seller Central</span>
+    </div>
+  </div>
+
+  <div class="skill-row">
+    <div class="cat">Pricing & Analytics</div>
+    <div class="skill-tags">
+      <span class="feature">Pricing strategy</span>
+      <span class="feature">Margin & COGS optimisation</span>
+      <span>Quantitative analysis</span>
+      <span>Profitability tracking</span>
+      <span>Competitive benchmarking</span>
+      <span>Catalog ROI</span>
+    </div>
+  </div>
+
+  <div class="skill-row">
+    <div class="cat">Data & Dashboards</div>
+    <div class="skill-tags">
+      <span class="feature">Advanced Excel</span>
+      <span>Pivot tables · Data modelling</span>
+      <span>Dashboard development</span>
+      <span>Google Analytics</span>
+      <span>SEO tools</span>
+      <span>PowerPoint</span>
+    </div>
+  </div>
+
+  <div class="skill-row">
+    <div class="cat">AI-Assisted Workflows</div>
+    <div class="skill-tags">
+      <span class="feature">Claude</span>
+      <span class="feature">ChatGPT</span>
+      <span>Prompt engineering</span>
+      <span>AI-augmented catalog ops</span>
+      <span>Automation design</span>
+    </div>
+  </div>
+
+  <div class="skill-row">
+    <div class="cat">Soft & Cross-functional</div>
+    <div class="skill-tags">
+      <span>Stakeholder management</span>
+      <span>Program management</span>
+      <span>Mentoring & training</span>
+      <span>Change management</span>
+      <span>Innovative thinking</span>
+      <span>Data-driven decisions</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="contact">
+  <div class="small">Let's talk</div>
+  <h2>Open to <em>Dubai</em>.</h2>
+
+  <div class="contact-grid">
+    <a href="mailto:jomalmathew111@gmail.com">
+      <div class="ctype">Email</div>
+      <div class="cval">jomalmathew111@gmail.com</div>
+    </a>
+    <a href="https://www.linkedin.com/in/jomal-mathew-4550a4149" target="_blank" rel="noopener">
+      <div class="ctype">LinkedIn</div>
+      <div class="cval">/in/jomal-mathew</div>
+    </a>
+    <a href="https://wa.me/919497660280" target="_blank" rel="noopener">
+      <div class="ctype">WhatsApp</div>
+      <div class="cval">+91 94976 60280</div>
+    </a>
+    <a href="tel:+919497660280">
+      <div class="ctype">Phone</div>
+      <div class="cval">+91 94976 60280</div>
+    </a>
+  </div>
+
+  <!-- secondary download button at bottom -->
+  <div style="margin-top: 50px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+    <a href="Jomal_Mathew_CV.pdf" download
+       style="display: inline-flex; align-items: center; gap: 12px; padding: 14px 26px; background: var(--blue); color: var(--paper); text-decoration: none; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; border-radius: 999px;">
+      Download CV (PDF) ↓
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div>© 2026 Jomal Mathew — Kannur, Kerala, India</div>
+  <div>Designed & built solo. Hosted on GitHub Pages.</div>
+</footer>
+
+</body>
+</html>
